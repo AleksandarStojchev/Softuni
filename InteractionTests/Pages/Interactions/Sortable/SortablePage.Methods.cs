@@ -11,6 +11,5 @@ namespace InteractionTests.Pages.Sortable
             : base(driver)
         {
         }
-        public override string URL => "http://www.demoqa.com/sortable";
     }
 }

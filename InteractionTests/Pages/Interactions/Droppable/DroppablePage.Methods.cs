@@ -12,6 +12,6 @@ namespace InteractionTests.Pages.Droppable
         {
         }
 
-        public override string URL => "http://www.demoqa.com/droppable";
+
     }
 }

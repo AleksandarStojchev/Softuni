@@ -11,6 +11,6 @@ namespace InteractionTests.Pages.Draggable
             : base(driver)
         {
         }
-        public override string URL  => "http://www.demoqa.com/dragabble"; 
+
     }
 }

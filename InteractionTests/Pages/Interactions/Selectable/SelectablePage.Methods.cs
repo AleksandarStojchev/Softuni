@@ -11,6 +11,5 @@ namespace InteractionTests.Pages.Selectable
             : base(driver)
         {
         }
-        public override string URL => "http://www.demoqa.com/selectable";
     }
 }

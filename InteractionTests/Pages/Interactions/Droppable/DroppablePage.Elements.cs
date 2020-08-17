@@ -7,6 +7,8 @@ namespace InteractionTests.Pages.Droppable
 {
     public partial class DroppablePage : BasePage
     {
+        public override string URL => "http://www.demoqa.com/droppable";
+
         //Elements from Simple tab
         public IWebElement SimpleTab => Driver.FindElement(By.XPath("*//a[normalize-space(text())='Simple']"));
         public IWebElement DragMeBox => Driver.FindElement(By.Id("draggable"));
