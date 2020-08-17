@@ -13,9 +13,9 @@ namespace AutomationPraticeRegistrationNegativeTests.Models
         public string Address1 { get; set; }
         public string City { get; set; }
         public int State { get; set; }
-        public string ZipCode { get; set; }
-        public int Country { get; set; }
-        public string MobilePhone { get; set; }
+        public int? ZipCode { get; set; }
+        public int? Country { get; set; }
+        public int? MobilePhone { get; set; }
         public string AssignAnAddresAlias { get; set; }
 
 

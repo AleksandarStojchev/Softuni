@@ -23,8 +23,8 @@ namespace AutomationPraticeRegistrationNegativeTests.Pages.AccountCreationPage
             State.Click();
             SelectElement stateValue = new SelectElement(State);
             stateValue.SelectByIndex(user.State);
-            ZipCode.SendKeys(user.ZipCode);
-            MobilePhone.SendKeys(user.MobilePhone);
+            ZipCode.SendKeys(user.ZipCode.ToString());
+            MobilePhone.SendKeys(user.MobilePhone.ToString());
             AssignAnAddresAlias.SendKeys(user.AssignAnAddresAlias);
             
             ScroolTo(RegisterButton).Click();

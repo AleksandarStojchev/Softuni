@@ -26,15 +26,12 @@ namespace AutomationPraticeRegistrationNegativeTests
 
             home = new HomePage(Driver);
             accountPage = new AccountCreation(Driver);
+
             user = FormFactory.Create();
             createAcccountEmail = new CreateAcccountEmailPage(Driver);
 
-            home.SignInButton.Click();
+            NavigateToForm();
 
-            createAcccountEmail.EmailAddresCreateAcc.SendKeys("mbrf@sdjn.com");
-            createAcccountEmail.CreateAccountButton.Click();
-
-            accountPage.Wait.Until(ExpectedConditions.ElementIsVisible(By.Id("account-creation_form")));
         }
         [Test]
         public void LastNameShouldBeRequired()
@@ -87,7 +84,7 @@ namespace AutomationPraticeRegistrationNegativeTests
         public void AtLeastOnePhoneNumberShouldBeRequired()
         {
 
-            user.MobilePhone = string.Empty;
+            user.MobilePhone = null;
 
             accountPage.FillForm(user);
 
@@ -105,7 +102,17 @@ namespace AutomationPraticeRegistrationNegativeTests
             accountPage.AssertFieldIsRequired("city is required.");
 
         }
+        
+        internal void NavigateToForm()
+        {
 
+            home.SignInButton.Click();
+
+            createAcccountEmail.EmailAddresCreateAcc.SendKeys("mbrf@sdjn.com");
+            createAcccountEmail.CreateAccountButton.Click();
+
+            accountPage.Wait.Until(ExpectedConditions.ElementIsVisible(By.Id("account-creation_form")));
+        }
         [TearDown]
         public void TearDown()
         {
